@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+            height: 100vh;
+            background-color: rgb(13, 114, 127);
+        }
+
+        form {
+            width: 450px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            padding: 8px;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-control {
+            width: 98%;
+            padding: 5px;
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 3px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            font-variant: small-caps;
+        }
+
+        .form-control:focus {
+            background-color: yellow;
+            box-shadow: 0 0 3px red;
+            border: 1px solid yellow;
+        }
+
+        .form-buttom {
+            width: 120px;
+            padding: 8px 30px;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            background-color: white;
+            color: orangered;
+            box-shadow: inset 0 0 20px blue;
+        }
+
+        .form-buttom:hover {
+            color: blue;
+            box-shadow: inset 0 0 20px orangered;
+        }
+
+        .form-buttom:disabled {
+            color: darkgray;
+            box-shadow: inset 0 0 20px gray;
+        }
+
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <div class="form-group">
+                <label for="">Họ và tên:</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend><label for="">Giới tính:</label></legend>
+                    <input type="radio" name="gender" value="">Nam
+                    <input type="radio" name="gender" value="">Nữ
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="">Ngày sinh:</label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label for="">Điểm:</label>
+                <input class="form-control" type="number" min="0" max="10" step="0.25">
+            </div>
+            <div class="form-group">
+                <label for="">Nghề nghiệp:</label>
+                <input class="form-control" type="list">
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend><label for="">Sở thích:</label></legend>
+                    <input type="radio" name="gender" value="">Thể thao
+                    <input type="radio" name="gender" value="">Du lịch
+                    <input type="radio" name="gender" value="">Âm nhạc
+                    <input type="radio" name="gender" value="">Ẩm thực
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="">Ghi chú:</label>
+                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <hr>
+            <div class="form-group">
+                <input class="form-buttom" type="buttom" value="Đăng kí">
+                <input class="form-buttom" type="reset" value="Nhập lại">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

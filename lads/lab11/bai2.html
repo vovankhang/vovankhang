@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            left: 50%;
+            right: 50%;
+            transform: translate(50%, 50%);
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        table,
+        td {
+            border: 1px solid rgb(138, 206, 222);
+
+        }
+
+        table {
+            border-collapse: collapse;
+            /*gộp cột thành 1*/
+            width: 50%;
+        }
+
+        .color {
+            background-color: rgb(63, 131, 233);
+        }
+
+        td {
+            text-align: center;
+            height: 36px;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(234, 225, 225);
+        }
+
+        tr:hover {
+            background-color: rgb(174, 233, 245);
+            color: azure;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td rowspan="2" class="color">NGOẠI TỆ</td>
+                <td colspan="2" class="color">TỈ GIÁ MUA</td>
+                <td rowspan="2" class="color">TỈ GIÁ BÁN</td>
+            </tr>
+            <tr>
+
+                <td class="color">TIÊN MẶT</td>
+                <td class="color">CHUYỂN KHOẢN</td>
+
+            </tr>
+            <tr>
+                <td>USD(USD 50-100)</td>
+                <td>22,250</td>
+                <td>22,260</td>
+                <td>22,345</td>
+            </tr>
+            <tr>
+                <td>USD(USD 5-20)</td>
+                <td>22,240</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>USD(DƯỚI 5 USD)</td>
+                <td>22,230</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>EUR</td>
+                <td>22,240</td>
+                <td>24,041</td>
+                <td>446</td>
+            </tr>
+            <tr>
+                <td>GBP</td>
+                <td>22,240</td>
+                <td>24,041</td>
+                <td>446</td>
+            </tr>
+            <tr>
+                <td>JPY</td>
+                <td>22,240</td>
+                <td>24,041</td>
+                <td>446</td>
+            </tr>
+            <tr>
+                <td>HKD</td>
+                <td>22,240</td>
+                <td>24,041</td>
+                <td>446</td>
+            </tr>
+            <tr>
+                <td>CNY</td>
+                <td></td>
+                <td>24,041</td>
+                <td>446</td>
+            </tr>
+            <tr>
+                <td>EUR</td>
+                <td>22,240</td>
+                <td>24,041</td>
+                <td>446</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

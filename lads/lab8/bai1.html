@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .menu>ul>li {
+            display: inline-block; /*chuyển vị trí thành hàng ngang*/
+        }
+        .menu>ul>li>a {
+            display: block;
+            text-decoration: none;
+            font-variant: small-caps;
+            font-size: large;
+            color: white;
+            padding: 10px;
+            line-height: 40px;
+        }
+        .menu>ul {
+            padding: 0px;
+            margin: 0px;
+            border-radius: 3px;
+            list-style: none;
+            background-color: orangered;
+            text-align: center;
+        }
+        .menu>ul>li>a:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Góp ý</a></li>
+            <li><a href="#">Gỏi đáp</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

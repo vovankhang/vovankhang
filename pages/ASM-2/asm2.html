@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM 2</title>
+    <link rel="stylesheet" href="/font/themify-icons-font/themify-icons/themify-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+           
+
+        }
+
+
+
+        header {
+            display: flex;
+            background-color: antiquewhite;
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            width: 20%;
+        }
+
+        .logo img {
+            width: 50%;
+            margin-top: 6px;
+        }
+
+        .menu {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            padding: 10px;
+        }
+
+        .menu li {
+            padding: 10px;
+        }
+
+        .menu li:hover {
+            color: orangered;
+        }
+
+        .login {
+            width: 30%;
+            float: right;
+        }
+
+        form {
+            margin-top: 19px;
+
+        }
+
+        input[type="text"] {
+            border: 2px solid rgb(42, 184, 151);
+            text-align: center;
+            border-radius: 4px;
+            margin-right: 14px;
+        }
+
+        .login a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            margin-right: 4px;
+        }
+
+        .login a:hover {
+            color: orangered;
+        }
+
+        /*main*/
+        .conten-main {
+
+            margin-top: 15px;
+            display: flex;
+
+        }
+
+        .anh img {
+            width: 500px;
+        }
+
+        .ad img {
+            margin-left: 50px;
+            width: 350px;
+            height: 307px;
+        }
+
+        .ad img:hover {
+            opacity: 0.5;
+        }
+
+        .noidung {
+            margin-left: 20px;
+            width: 250px;
+            height: 300px;
+        }
+
+        .noidung h3 a {
+            text-decoration: none;
+            color: black;
+            text-align: left;
+            font-size: 28px;
+        }
+
+        .noidung h3 a:hover {
+            color: rgb(12, 181, 193);
+            cursor: pointer;
+        }
+
+        .noidung p {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        .gach {
+            margin-top: 3px;
+            width: 770px;
+        }
+
+
+        .conten-extra {
+            display: flex;
+        }
+
+        .conten-phu-1 h4 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .conten-phu-1 {
+            cursor: pointer;
+            margin-top: 2px;
+            width: 216px;
+        }
+
+        .conten-phu-1 h4 a:hover {
+
+            color: rgb(12, 181, 193);
+        }
+
+        .conten-phu-1 p {
+            margin-top: 5px;
+        }
+
+        .conten-phu-2 {
+
+            margin-left: 20px;
+            cursor: pointer;
+            margin-top: 2px;
+            width: 216px;
+        }
+
+        .conten-phu-2 h4 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .conten-phu-2 h4 a:hover {
+
+            color: rgb(12, 181, 193);
+        }
+
+        .conten-phu-2 p {
+            margin-top: 22px;
+        }
+
+        .conten-phu-3 {
+
+            margin-left: 20px;
+            cursor: pointer;
+            margin-top: 2px;
+            width: 216px;
+        }
+
+        .conten-phu-3 h4 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .conten-phu-3 h4 a:hover {
+
+            color: rgb(12, 181, 193);
+        }
+
+        .conten-phu-3 p {
+            margin-top: 6px;
+        }
+
+        .conten-extra hr {
+            margin-left: 22px;
+        }
+
+        .cuoi {
+            margin-top: 10px;
+        }
+
+        .phu-conten-extra {
+            width: 340px;
+            height: 139px;
+        }
+
+        .phu-conten-extra p {
+            margin-top: 10px;
+            margin-bottom: 3px;
+            text-align: left;
+
+        }
+
+        .phu-conten-extra h4 {
+            cursor: pointer;
+        }
+
+        .phu-conten-extra h4:hover {
+            color: rgb(12, 181, 193);
+        }
+
+        .conten-extra-2 {
+            width: 40%;
+            display: inline-block;
+
+        }
+
+        .conten-to {
+            width: 60%;
+            float: right;
+
+        }
+
+        .conten-to h3 {
+            margin-top: 12px;
+            font-variant: small-caps;
+        }
+
+
+
+        table,
+        th,
+        td {
+            border: 1px solid rgb(100, 222, 235);
+
+        }
+
+        table {
+            border-collapse: collapse;
+            /*gộp cột thành 1*/
+            width: 100%;
+            margin-top: 15px;
+
+        }
+
+        th {
+            height: 10px;
+            background-color: greenyellow;
+        }
+
+        .tail {
+            background-color: aqua;
+            text-align: center;
+            color: rgb(2, 11, 19);
+        }
+
+        td {
+            text-align: center;
+
+        }
+
+        .vs {
+            width: 100px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        tr:hover {
+            background-color: aquamarine;
+            cursor: pointer;
+        }
+
+        .conten-to hr {
+            margin-top: 10px;
+        }
+
+        .sport {
+            display: flex;
+        }
+
+        .sport img {
+
+            width: 222px;
+            height: 134px;
+        }
+
+        .sport {
+            margin-top: 20px;
+        }
+
+        .sport-1 {
+            cursor: pointer;
+            display: flex;
+        }
+
+        .conten-sport-1:hover h4 {
+            color: rgb(12, 181, 193);
+        }
+
+        .conten-sport-1 {
+
+            margin-left: 5px;
+            width: 208px;
+            height: 154px;
+        }
+
+        .conten-sport-1 p {
+            margin-top: 5px;
+        }
+
+        .sport-1>hr {
+
+            margin-left: 10px;
+        }
+
+        .conten-sport-2 {
+
+            margin-left: 10px;
+            width: 208px;
+            height: 154px;
+        }
+
+        .conten-sport-2:hover h4 {
+            color: rgb(12, 181, 193);
+        }
+
+        .conten-sport-2 p {
+            margin-top: 5px;
+        }
+
+        .sport-2-noidung-1 {
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .sport-2-noidung-1 h4 {
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            margin-left: 15px;
+            font-weight: lighter;
+        }
+
+        .sport-2-noidung-1 h4:hover {
+            color: rgb(12, 181, 193);
+        }
+
+        /*footer*/
+
+
+        .end {
+            margin-bottom: 20px;
+        }
+
+        .end>hr {
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 15px;
+            border-color: #efeaea;
+            margin-top: 27px;
+        }
+
+        li.item-menu {
+            list-style: none;
+        }
+
+        li.item-menu:hover {
+            text-decoration: underline;
+        }
+
+        ul.list-menu-footer {
+            display: inline-block;
+            padding-right: 90px;
+            margin-top: 22px;
+            line-height: 29px;
+            font-size: 14px;
+        }
+
+        .contact-footer {
+            border-radius: 10px;
+            margin-top: 22px;
+            width: 355px;
+            height: 150px;
+            float: right;
+            background-color: #f5efef;
+        }
+
+        h6 {
+            font-size: 15px;
+            margin-left: 100px;
+            margin-bottom: 15px;
+        }
+
+        .icons {
+            display: inline-grid;
+        }
+
+        .icon {
+            margin-left: 12px;
+            margin-bottom: 18px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            color: rgb(20, 233, 233);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/img/logofptmdemo.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>Trang Chủ</li>
+                    <li>Tin Mới</li>
+                    <li>Tin Tháng</li>
+                </ul>
+            </div>
+            <div class="login">
+                <form action="">
+                    <input type="text" placeholder="Tim Kiếm">
+                    <a href="/pages/ASM-2/dangnhap-asm2.html">Đăng kí</a>
+                    <a href="/pages/ASM-2/dangnhap-asm2.html">Đăng Nhập</a>
+                </form>
+            </div>
+        </header>
+        <div class="mau-backgroud">
+            <div class="conten">
+                <div class="conten-main">
+                    <div class="anh"><img
+                            src="https://i1-vnexpress.vnecdn.net/2023/02/09/5563187178137267640aUkraine-16-2946-3948-1675947413.jpg?w=680&h=408&q=100&dpr=1&fit=crop&s=L62tcNijySIN4Hg6dzk3RA"
+                            alt="anh"></div>
+                    <div class="noidung">
+                        <h3><a href="/pages/ASM-2/webcon1.html">Ông Zelensky thúc giục EU kết nạp Ukraine</a></h3>
+                        <p>Tổng thống Ukraine kêu gọi EU sớm kết nạp Ukraine, nhận định tiến trình gia nhập liên minh là
+                            “đường về nhà” của nước này.
+                            2h trướcThế giới.</p>
+
+                    </div>
+                    <hr>
+                    <div class="ad"><img src="/img/ad.png" alt="anh"></div>
+                </div>
+                <div class="gach">
+                    <hr>
+                </div>
+                <div class="conten-extra">
+                    <div class="conten-phu-1">
+                        <h4><a href="">24 chiến sĩ, nhân viên y tế Việt Nam sang Thổ Nhĩ Kỳ cứu nạn</a></h4>
+                        <p>Đoàn biệt phái gồm 24 chiến sĩ cứu hộ và nhân viên y tế 22h hôm nay bay sang Thổ Nhĩ Kỳ hỗ
+                            trợ
+                            tìm kiếm nạn nhân mắc kẹt sau trận động đất. </p>
+                    </div>
+                    <hr>
+                    <div class="conten-phu-2">
+                        <h4><a href="">Văn Quyết giúp Hà Nội thắng CAHN</a></h4>
+                        <p>HÀ NỘI Cú đúp của tiền đạo Nguyễn Văn Quyết giúp chủ nhà Hà Nội thắng tân binh Công An Hà Nội
+                            2-0, ở vòng hai V-League 2023 hôm 9/2. </p>
+
+
+                    </div>
+                    <hr>
+                    <div class="conten-phu-3">
+                        <h4><a href="">6 cựu CSGT bị bắt do sai phạm khi kiểm tra nồng độ cồn</a></h4>
+                        <p>HẢI DƯƠNG6 cựu cán bộ Đội Cảnh sát giao thông - trật tự, Công an thành phố Chí Linh bị bắt
+                            với
+                            cáo buộc có sai phạm khi thực hiện nhiệm vụ kiểm tra nồng độ cồn. </p>
+
+
+                    </div>
+                </div>
+                <div class="cuoi">
+                    <hr>
+                </div>
+            </div>
+            <div class="conten-extra-2">
+                <div class="phu-conten-extra">
+                    <h4>6 cựu CSGT bị bắt do sai phạm khi kiểm tra nồng độ cồn</h4>
+                    <p>HẢI DƯƠNG6 cựu cán bộ Đội Cảnh sát giao thông - trật tự, Công an thành phố Chí Linh bị bắt với
+                        cáo
+                        buộc có sai phạm khi kiểm tra nồng độ cồn.</p>
+                    <hr>
+                </div>
+                <div class="phu-conten-extra">
+                    <h4>Việt Nam lên tiếng về phán quyết của Hàn Quốc liên quan vụ thảm sát Quảng Nam</h4>
+                    <p>Việt Nam theo dõi phán quyết của tòa án Seoul liên quan đến vụ thảm sát do lính Hàn Quốc thực
+                        hiện ở
+                        Quảng Nam năm 1968 và coi trọng bảo vệ quyền lợi công dân. </p>
+                    <hr>
+                </div>
+                <div class="phu-conten-extra">
+                    <h4>Thủ đoạn thông thầu của Chủ tịch NSJ Group Hoàng Thị Thúy Nga</h4>
+                    <p>TP HCMChủ tịch NSJ Group Hoàng Thị Thúy Nga nhờ Phó chủ tịch Cần Thơ tác động, chi tiền cho lãnh
+                        đạo
+                        Sở Y tế, để được trúng 4 gói thầu với giá đã nâng khống. </p>
+                    <hr>
+                </div>
+                <div class="phu-conten-extra">
+                    <h4>Người Việt tại Thổ Nhĩ Kỳ chung tay hỗ trợ nạn nhân động đất</h4>
+                    <p>Cộng đồng người Việt ở Thổ Nhĩ Kỳ đã phát động chiến dịch quyên góp nhu yếu phẩm, quần áo để hỗ
+                        trợ
+                        người dân nước này vượt qua thảm họa động đất kinh hoàng </p>
+                    <hr>
+                </div>
+
+            </div>
+            <div class="conten-to">
+                <div class="lich">
+                    <h3>Lịch Bóng Đá Hôm nay</h3>
+                </div>
+                <table cellpadding="10px">
+                    <tr>
+                        <th>thời gian </th>
+                        <th colspan="3">trận đấu</th>
+                        <th>trưc tiếp</th>
+                    </tr>
+                    <tr>
+                        <td class="tail" colspan="5">vong chung kết u19 Châu Á 2016</td>
+                    </tr>
+                    <tr>
+                        <td>17/10 <br> 20:30 </td>
+                        <td class="red">u19 Việt Nam</td>
+                        <td class="vs"></td>
+                        <td>u19 UAE</td>
+                        <td class="red">foxsports2</td>
+                    </tr>
+                    <tr>
+                        <td>17/10 <br> 20:30</td>
+                        <td>u19 iran</td>
+                        <td class="vs"></td>
+                        <td>u19 Nhật Bản</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17/10 <br> 20:30</td>
+                        <td>u19 iranq</td>
+                        <td class="vs"></td>
+                        <td>u19 Triều Tiên</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17/10 <br> 20:30</td>
+                        <td>u19 Yemen</td>
+                        <td class="vs"></td>
+                        <td>u19 Qatar</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <hr>
+                <div class="sport">
+                    <div class="sport-1">
+                        <img src="https://i1-thethao.vnecdn.net/2023/02/10/a1-1675997346-2552-1675997518.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=fkP0GcvLWAFvvD8sXKFGHw"
+                            alt="anh">
+                        <div class="conten-sport-1">
+                            <h4>Alcaraz: 'Nadal và Djokovic bắt bài tôi'</h4>
+                            <p>Theo Carlos Alcaraz, một vài cú đánh sở trường của anh bị hai đàn anh Rafael Nadal và
+                                Novak
+                                Djokovic bắt bài, khiến hiệu quả giảm sút.</p>
+                        </div>
+                        <hr>
+                        <div class="conten-sport-2">
+                            <h4>Ronaldo: 'Tôi hạnh phúc hơn vì Al Nassr thắng'</h4>
+                            <p>ARAB SAUDIThủ quân Cristiano Ronaldo cho rằng cú poker không khiến anh vui mừng hơn so
+                                với
+                                chiến ...</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="sport-2-noidung-1">
+                    <h4>10 kỷ lục thể thao khó phá nhất</h4>
+                    <h4>Tài tử Thái Lan lâm cảnh vô gia cư</h4>
+                    <h4>Trang Nhung: 'Tiền không phải tất cả với tôi'</h4>
+                </div>
+
+
+            </div>
+        </div>
+        <footer>
+            <div class="end">
+                <hr>
+                <ul class="list-menu-footer">
+                    <li class="item-menu">Trang chủ</li>
+                    <li class="item-menu">Video</li>
+                    <li class="item-menu">Podcasts</li>
+                    <li class="item-menu">Ảnh</li>
+                    <li class="item-menu">Infographics</li>
+                </ul>
+                <ul class="list-menu-footer">
+                    <li class="item-menu">Thời sự</li>
+                    <li class="item-menu">Góc nhìn </li>
+                    <li class="item-menu">Thế giớ</li>
+                    <li class="item-menu">kinh doanh</li>
+                    <li class="item-menu">Giải trí</li>
+                </ul>
+                <ul class="list-menu-footer">
+                    <li class="item-menu">Thể thao</li>
+                    <li class="item-menu">Pháp luật</li>
+                    <li class="item-menu">Giáo dục</li>
+                    <li class="item-menu">Sức khỏe</li>
+                    <li class="item-menu">Đời sống</li>
+                </ul>
+                <ul class="list-menu-footer">
+                    <li class="item-menu">Rạo vặt</li>
+                    <li class="item-menu">Starsup</li>
+                    <li class="item-menu">Mua ảnh</li>
+                    <li class="item-menu">eBox</li>
+                    <li class="item-menu">ework</li>
+                </ul>
+                <ul class="list-menu-footer">
+                    <li class="item-menu">Khoa học</li>
+                    <li class="item-menu">Số hóa</li>
+                    <li class="item-menu">Xe</li>
+                    <li class="item-menu">Ý kiến</li>
+                    <li class="item-menu">Tâm sự</li>
+                </ul>
+                <div class="contact-footer">
+                    <div class="icons">
+                        <h6>Liên hệ</h6>
+                        <i class="ti-facebook icon"> FACEBOOK</i>
+                        <i class="ti-instagram  icon"> INSTARGRAM</i>
+                        <i class="ti-email icon"> EMAIL</i>
+                        <i class="ti-youtube icon"> YOUTOBE</i>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
