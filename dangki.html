@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+
+            justify-content: center;
+        }
+
+        .login {
+            border-radius: 45px;
+            width: 500px;
+            height: 266px;
+            background-color: rgb(143, 240, 240);
+
+        }
+
+        .login:hover {
+            border: 1px solid black;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        form {
+            margin-left: 104px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            text-align: center;
+            display: block;
+            padding: 7px;
+            margin-bottom: 18px;
+            box-sizing: border-box;
+            border-radius: 11px;
+            border: 1px solid #ccc;
+
+        }
+
+        .dangnhap {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #1ce68e;
+            text-align: center;
+        }
+
+        .dangnhap a {
+            font-variant: small-caps;
+            text-decoration: none;
+            color: white;
+        }
+
+        .dangnhap:hover {
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="tail">
+                <h2>ĐĂNG KÍ</h2>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Nhập họ và tên">
+                <input type="email" placeholder="nhập email">
+                <input type="password" placeholder="Mật khẩu">
+                <div class="dangnhap">
+                    <a href="index.html">đăng kí</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
